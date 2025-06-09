@@ -14,7 +14,7 @@ const BannerProducts = () => {
           Comprar
         </Link>
       </div>
-      <div className="h-[900px] " />
+      <div className="h-[350px] bg-cover lg:h-[600px] bg-[url('/coffe3.jpeg')] bg-center mt-5" />
     </>
   );
 };

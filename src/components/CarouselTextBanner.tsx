@@ -35,7 +35,7 @@ export const dataCarouselTop = [
 
 const CarouselTextBanner = () => {
   return (
-    <div className="bg-gray-200 dark:bg-primary">
+    <div className="mt-16 bg-gray-200 dark:bg-primary">
       <Carousel
         className="w-full max-w-4xl mx-auto"
         plugins={[
