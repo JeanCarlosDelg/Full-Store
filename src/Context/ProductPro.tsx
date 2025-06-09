@@ -1,29 +1,17 @@
-import { createContext, useState, type ReactNode } from 'react';
+import { createContext, type ReactNode } from 'react';
 
-export interface Product {
-  id: number
-  name: string
-  price: number
-  image: string
-  description?: string
-}
-
-interface ProductContextType {
-  products: Product[]
-  // setProducts: (products: Product[]) => void
-  // getProductById: (id: number) => Product | undefined
-}
+type ProductContextType = {
+  prueba: string;
+};
 
 export const ProductContext = createContext<ProductContextType | undefined>(undefined)
 
 export function ProductProvider({ children }: { children: ReactNode}) {
 
-  const [products, setProducts] = useState<Product[]>([])
+  const prueba:string = "hello wold"
   
   return (
-    <ProductContext.Provider value={{
-      products
-    }}>
+    <ProductContext.Provider value={{ prueba }}>
       { children }
     </ProductContext.Provider>
   )

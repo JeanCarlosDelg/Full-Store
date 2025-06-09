@@ -7,7 +7,7 @@ export function useGetFeatureProducts() {
 
   const url = `${urlBase}/api/products?filters[isFeatured][$eq]=true&populate=*`;
 
-  const [products, setProducts] = useState<ProductsType[] | null>(null);
+  const [products, setProducts] = useState<ProductsType[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
