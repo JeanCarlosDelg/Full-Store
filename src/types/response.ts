@@ -1,7 +1,8 @@
 export type ResponseType = {
   products: any,
   loading: boolean,
-  error: string
+  error: string,
+  urlBase?: string
 }
 
 export type SkeletonSchemaProps = {
@@ -26,5 +27,14 @@ export type ProductsType = {
     idCate: number,
     slugCate: string,
     nameCate: string  
+  }
+}
+
+export type CategoryType = {
+  id: number,
+  name: string,
+  slug: string,
+  image: {
+    urlImg: string
   }
 }
