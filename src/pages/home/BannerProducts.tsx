@@ -14,7 +14,7 @@ const BannerProducts = () => {
           Comprar
         </Link>
       </div>
-      <div className="h-[900px]" />
+      <div className="h-[900px] " />
     </>
   );
 };
