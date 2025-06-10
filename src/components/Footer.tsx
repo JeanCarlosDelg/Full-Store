@@ -29,7 +29,7 @@ const Footer = () => {
     <footer className="mt-4">
       <div className="flex flex-col items-center text-center w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="w-full px-4 sm:flex sm:items-center sm:justify-between">
-            <p>
+            <p className="mr-4">
               <span className="font-bold mr-2">JeanDev</span>
               E-commerce
             </p>

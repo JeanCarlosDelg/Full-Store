@@ -1,4 +1,4 @@
-import type { ProductsType } from "@/types/response";
+import type { ProductsType } from "@/types/allTypes";
 
 export function transformProductData(data: any[]): ProductsType[] {
   return data.map((product): ProductsType => {

@@ -38,3 +38,19 @@ export type CategoryType = {
     urlImg: string
   }
 }
+
+export type FilterTypes = {
+  products: ResultFilterTypes | null,
+  loading: boolean,
+  error: string
+}
+
+export type ResultFilterTypes = {
+  schema: {
+    attributes: {
+      origin: {
+        enum: any
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import type { ProductsType, ResponseType } from "@/types/response";
+import type { ProductsType, ResponseType } from "@/types/allTypes";
 import { Expand, ShoppingCart } from "lucide-react";
 
 const FeaturedProducts = () => {
@@ -52,7 +52,7 @@ const FeaturedProducts = () => {
                       </div>
                     </CardContent>
                     <div className="flex justify-between gap-4 px-8">
-                      <h3 className="text-lg font-bold">{product.nameProd }</h3>
+                      <h3 className="text-lg font-bold">{product.nameProd}</h3>
                       <div className="flex justify-between items-center gap-3">
                         <p className="px-2 py-1 text-white bg-black rounded-full dark:text-black dark:bg-white w-fit">{product.taste}</p>
                         <p className="px-2 py-1 rounded-full bg-gray-300 text-black dark:bg-red-500 w-fit">{product.origin}</p>

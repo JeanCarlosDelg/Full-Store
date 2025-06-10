@@ -1,5 +1,5 @@
 import { transformProductData } from "@/utils/transformProductsData";
-import type { ProductsType } from "@/types/response";
+import type { ProductsType } from "@/types/allTypes";
 import { useEffect, useState } from "react";
 
 export function useGetFeatureProducts() {

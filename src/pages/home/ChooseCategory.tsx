@@ -1,5 +1,5 @@
 import { useGetCategories } from "@/api/UseGetCategories";
-import type { CategoryType, ResponseType } from "@/types/response";
+import type { CategoryType, ResponseType } from "@/types/allTypes";
 import { Link } from "react-router-dom";
 
 const ChooseCategory = () => {

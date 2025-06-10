@@ -1,4 +1,4 @@
-import type { CategoryType } from "@/types/response";
+import type { CategoryType } from "@/types/allTypes";
 
 export function transformCategoryData(data: any[]): CategoryType[] {
   return data.map((category): CategoryType => {

@@ -1,4 +1,4 @@
-import type { SkeletonSchemaProps } from "@/types/response";
+import type { SkeletonSchemaProps } from "@/types/allTypes";
 import { Skeleton } from "./ui/skeleton";
 
 const SkeletonSchema = (props: SkeletonSchemaProps) => {

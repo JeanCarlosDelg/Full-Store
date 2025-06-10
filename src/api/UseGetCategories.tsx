@@ -1,4 +1,4 @@
-import type { CategoryType } from "@/types/response";
+import type { CategoryType } from "@/types/allTypes";
 import { transformCategoryData } from "@/utils/transformCategoryData";
 import { useEffect, useState } from "react";
 

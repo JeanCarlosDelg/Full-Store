@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-  
+
   return (
     <>
       <ThemeProvider
@@ -12,7 +12,7 @@ const Layout = () => {
         storageKey="vite-ui-theme"
       >
         <Navbar />
-        <main className="p-4">
+        <main className="p-4 mt-16">
           <Outlet />
         </main>
         <Footer />

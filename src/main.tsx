@@ -10,6 +10,8 @@ import NotFound from "./pages/NotFound.tsx";
 import Cart from "./pages/Cart.tsx";
 import LoveProducts from "./pages/LoveProducts.tsx";
 import MyProfile from "./pages/MyProfile.tsx";
+import Category from "./pages/categories/Category.tsx";
+import CategoryDetail from "./pages/categories/CategoryDetail.tsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: "/my-profile",
         element: <MyProfile />
+      },
+      {
+        path: "/category",
+        element: <Category />
+      },
+      {
+        path: "/category/:slug",
+        element: <CategoryDetail />
       },
       // {
       //   path: "/",
