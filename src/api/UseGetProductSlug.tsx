@@ -1,15 +1,15 @@
 import type { ProductsType } from "@/types/allTypes";
-import { transformProductData } from "@/utils/transformProductsData";
+import { transformOneProduct } from "@/utils/transformOneProduct";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export function useGetCategoryProducts() {
+export function useGetProductSlug() {
   
   const { slug } = useParams()
   const urlBase = import.meta.env.VITE_BACKEND_URL;
-  const url = `${urlBase}/api/products?populate=*&filters[category][slug][$eq]=${slug}`;
+  const url = `${urlBase}/api/products?populate=*&filters[slug][$eq]=${slug}`;
 
-  const [products, setProducts] = useState<ProductsType[]>([]);
+  const [products, setProducts] = useState<ProductsType | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -18,8 +18,8 @@ export function useGetCategoryProducts() {
       try {
         const res = await fetch(url);
         const { data } = await res.json()
-        const newProducts: ProductsType[]  = transformProductData(data)
-        setProducts(newProducts)
+        const newProduct: ProductsType = transformOneProduct(data[0])
+        setProducts(newProduct)
         setLoading(false)
       } catch (error: any) {
         setError(error)
@@ -28,5 +28,5 @@ export function useGetCategoryProducts() {
     })();
   }, [url]);
 
-  return { products, loading, error, urlBase };
+  return { products, loading, error };
 }

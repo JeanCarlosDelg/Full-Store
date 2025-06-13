@@ -19,6 +19,7 @@ export type ProductsType = {
   taste: string,
   origin: string,
   price: number,
+  quantity?: number,
   images: {
     idImg: number,
     url: string,
@@ -53,4 +54,8 @@ export type ResultFilterTypes = {
       }
     }
   }
+}
+
+export type FilterOriginProps = {
+  setFilterOrigin: (origin: string) => void
 }

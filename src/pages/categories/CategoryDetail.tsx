@@ -5,11 +5,20 @@ import { useParams } from "react-router-dom";
 import FiltersCategories from "./components/FiltersCategories";
 import SkeletonSchema from "@/components/SkeletonSchema";
 import { ProductsCartCategory } from "./components/ProductsCartCategory";
+import { useState } from "react";
 
 const CategoryDetail = () => {
 
   const { slug } = useParams();
-  const { products, loading, urlBase }: ResponseType = useGetCategoryProducts()
+  const { products, loading }: ResponseType = useGetCategoryProducts()
+  
+  const [filterOrigin, setFilterOrigin] = useState("")
+  
+  const FilteredProductOrigin = !loading && products !== null && (
+    filterOrigin === '' || filterOrigin === 'Todos'
+      ? products 
+      : products.filter((product: ProductsType) => product.origin === filterOrigin)
+  )
   
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
@@ -21,7 +30,7 @@ const CategoryDetail = () => {
       <Separator />
 
       <div className="sm:flex sm:justify-between">
-        <FiltersCategories />
+        <FiltersCategories setFilterOrigin={setFilterOrigin}/>
 
         <div className="grid gap-5 mt-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">
           {
@@ -30,10 +39,15 @@ const CategoryDetail = () => {
             )
           }
           {
-            !loading && products !== null && (
-              products.map((product: ProductsType) => (
-                <ProductsCartCategory key={product.idProd} product={product} url={urlBase}/>
+            !loading && FilteredProductOrigin !== null && (
+              FilteredProductOrigin.map((product: ProductsType) => (
+                <ProductsCartCategory key={product.idProd} product={product} />
               ))
+            )
+          }
+          {
+            !loading && FilteredProductOrigin !== null && FilteredProductOrigin.length === 0 && (
+              <p>No hay productos con este filtro.</p>
             )
           }
         </div>

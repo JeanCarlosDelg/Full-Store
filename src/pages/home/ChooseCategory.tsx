@@ -3,7 +3,7 @@ import type { CategoryType, ResponseType } from "@/types/allTypes";
 import { Link } from "react-router-dom";
 
 const ChooseCategory = () => {
-  const { products, loading, urlBase }: ResponseType = useGetCategories();
+  const { products, loading}: ResponseType = useGetCategories();
 
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
@@ -22,7 +22,7 @@ const ChooseCategory = () => {
             >
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg shadow-md">
                 <img
-                  src={`${urlBase}${category.image.urlImg}`}
+                  src={category.image.urlImg}
                   alt={category.name}
                   className="w-full h-full object-cover transition duration-300 ease-in-out hover:scale-110"
                 />

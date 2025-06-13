@@ -1,12 +1,16 @@
-import { Heart, ShoppingCart, User } from "lucide-react";
+import { BaggageClaim, Heart, ShoppingCart, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import MenuMobile from "./MenuMobile";
 import MenuDesktop from "./MenuDesktop";
 import ModeToggle from "./ModeToggle";
 import { useEffect, useState } from "react";
+import { useCart } from "@/hooks/useCart";
+import { useLovedProducts } from "@/hooks/useLovedProducts";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { items } = useCart();
+  const { lovedItems } = useLovedProducts();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,14 +41,28 @@ const Navbar = () => {
           <MenuMobile />
         </div>
         <div className="flex items-center justify-between gap-2 md:gap-7">
-          {/* icono del carrito */}
-          <Link to="/cart" className="no-underline hover:underline">
-            <ShoppingCart strokeWidth="1" className="cursor-pointer" />
-          </Link>
+          {items.length === 0 ? (
+            <Link to={"/cart"} className="no-underline hover:underline">
+              {/* icono del carrito */}
+              <ShoppingCart strokeWidth={1} className="cursor-pointer" />
+            </Link>
+          ) : (
+            <Link
+              to={"/cart"}
+              className=" flex gap-1 no-underline hover:underline"
+            >
+              {/* icono del carrito */}
+              <BaggageClaim strokeWidth={1} className="cursor-pointer" />
+              <span>{items.length}</span>
+            </Link>
+          )}
 
-          {/* icono de los favoritos */}
           <Link to="/love-products" className="no-underline hover:underline">
-            <Heart strokeWidth="1" className="cursor-pointer" />
+            {/* icono de los favoritos */}
+            <Heart 
+              strokeWidth="1" 
+              className={`cursor-pointer ${lovedItems.length > 0 && "fill-black dark:text-red-500 dark:fill-red-500"}`} 
+            />
           </Link>
 
           {/* icono de mi perfil */}

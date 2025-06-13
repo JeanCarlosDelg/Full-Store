@@ -1,5 +1,9 @@
 import { useGetFeatureProducts } from "@/api/UseGetFeatureProducts";
-import LinkButton from "@/components/LinkButton";
+import {
+  BottonsMiniatured,
+  ImagesMiniatured,
+  OriginAndTaste,
+} from "@/components/shared/productSared";
 import SkeletonSchema from "@/components/SkeletonSchema";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -10,13 +14,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import type { ProductsType, ResponseType } from "@/types/allTypes";
-import { Expand, ShoppingCart } from "lucide-react";
 
 const FeaturedProducts = () => {
-  const urlBase = import.meta.env.VITE_BACKEND_URL;
 
   const { products, loading }: ResponseType = useGetFeatureProducts();
- 
+
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
       <h3 className="font-semibold px-6 text-3xl sm:pb-8">
@@ -35,28 +37,26 @@ const FeaturedProducts = () => {
                 <div className="p-1">
                   <Card className="py-4 border border-gray-200 shadow-none">
                     <CardContent className="relative flex items-center justify-center py-2 px-6">
-                      <img
-                        className="w-[320px] h-[150px] object-cover"
-                        src={`${urlBase}${product.images[0].url}`}
-                        alt="Image featured"
+
+                      <ImagesMiniatured
+                        url={product.images[0].url}
+                        name={product.nameProd}
                       />
-                      <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-80 bottom-5">
-                        <div className="flex justify-center gap-x-6">
-                            <LinkButton to={`/product/${product.slugProd}`}>
-                              <Expand size={20} />
-                            </LinkButton>
-                            <LinkButton to={"/cart"}>
-                              <ShoppingCart />
-                            </LinkButton>
-                        </div>
-                      </div>
+
+                      <BottonsMiniatured
+                        slugProd={product.slugProd}
+                        product={product}
+                      />
+
                     </CardContent>
                     <div className="flex justify-between gap-4 px-8">
+                      
                       <h3 className="text-lg font-bold">{product.nameProd}</h3>
-                      <div className="flex justify-between items-center gap-3">
-                        <p className="px-2 py-1 text-white bg-black rounded-full dark:text-black dark:bg-white w-fit">{product.taste}</p>
-                        <p className="px-2 py-1 rounded-full bg-gray-300 text-black dark:bg-red-500 w-fit">{product.origin}</p>
-                      </div>
+
+                      <OriginAndTaste
+                        origin={product.origin}
+                        taste={product.taste}
+                      />
                     </div>
                   </Card>
                 </div>

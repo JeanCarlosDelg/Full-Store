@@ -3,15 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ProductProvider } from "./Context/ProductPro.tsx";
 import Layout from "./layouts/Layout.tsx";
 import NoLayout from "./layouts/NoLayout.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import Cart from "./pages/Cart.tsx";
-import LoveProducts from "./pages/LoveProducts.tsx";
+import Cart from "./pages/cart/Cart.tsx";
+import LoveProducts from "./pages/loveProducts/LoveProducts.tsx";
 import MyProfile from "./pages/MyProfile.tsx";
-import Category from "./pages/categories/Category.tsx";
 import CategoryDetail from "./pages/categories/CategoryDetail.tsx";
+import Products from "./pages/products/Products.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,12 +34,12 @@ const router = createBrowserRouter([
         element: <MyProfile />
       },
       {
-        path: "/category",
-        element: <Category />
-      },
-      {
         path: "/category/:slug",
         element: <CategoryDetail />
+      },
+      {
+        path: "/product/:slug",
+        element: <Products/>
       },
       // {
       //   path: "/",
@@ -66,8 +65,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ProductProvider>
       <RouterProvider router={router} />
-    </ProductProvider>
   </StrictMode>
 );
