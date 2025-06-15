@@ -7,9 +7,8 @@ import type { ProductsType } from "@/types/allTypes";
 const PayPalButtonComponent = () => {
   const { items: cartItems, removeAll } = useCart();
   const urlBaseBackend = import.meta.env.VITE_BACKEND_URL;
-  const { paymentId } = useParams();
-  console.log("paymentId:", paymentId);
-
+  const { paymentId } = useParams()
+  
   // Total desde carrito (para crear orden)
   // const totalAmount = cartItems.reduce((acc, item) => {
   //   const quantity = item.quantity ?? 1;
