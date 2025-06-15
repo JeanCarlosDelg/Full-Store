@@ -1,8 +1,8 @@
 
 const MyProfile = () => {
   return (
-    <div>
-      From to My Profile
+    <div className="text-center">
+      Pronto se implementaran los Logins para porder mostrar un usario
     </div>
   )
 }

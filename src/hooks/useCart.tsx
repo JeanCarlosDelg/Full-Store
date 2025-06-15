@@ -62,7 +62,10 @@ export const useCart = create(
         });
       },
 
-      removeAll: () => set({ items: [] }),
+      removeAll: () => {
+        set({ items: [] })
+        localStorage.removeItem("cart-storage")
+      },
     }),
     {
       name: "cart-storage",

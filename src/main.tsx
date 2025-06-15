@@ -11,6 +11,8 @@ import LoveProducts from "./pages/loveProducts/LoveProducts.tsx";
 import MyProfile from "./pages/MyProfile.tsx";
 import CategoryDetail from "./pages/categories/CategoryDetail.tsx";
 import Products from "./pages/products/Products.tsx";
+import PaypalSuccess from "./pages/paypal/components/PaypalSuccess.tsx";
+import PaypalCancel from "./pages/paypal/components/PaypalCancel.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,47 +20,47 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <App />
       },
       {
-        path: "/cart",
+        path: "cart",
         element: <Cart />
       },
       {
-        path: "/love-products",
+        path: "love-products",
         element: <LoveProducts />
       },
       {
-        path: "/my-profile",
+        path: "my-profile",
         element: <MyProfile />
       },
       {
-        path: "/category/:slug",
+        path: "category/:slug",
         element: <CategoryDetail />
       },
       {
-        path: "/product/:slug",
+        path: "product/:slug",
         element: <Products/>
       },
-      // {
-      //   path: "/",
-      //   element: <App />
-      // },
+      {
+        path: "success",
+        element: <PaypalSuccess />
+      },
+      {
+        path: "cancel",
+        element: <PaypalCancel />
+      }
     ]
   },
   {
-    path: "/",
+    path: "*",
     element: <NoLayout />,
     children: [
       {
-        path: "/notfound",
+        path: "notfound",
         element: <NotFound />
-      },
-      // {
-      //   path: "/",
-      //   element: <App />
-      // },
+      }
     ]
   },
 ]);

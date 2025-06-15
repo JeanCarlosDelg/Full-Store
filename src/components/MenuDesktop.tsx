@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { Link } from "react-router-dom"
 
 import {
   NavigationMenu,
@@ -10,8 +9,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
+  // navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Link } from "react-router-dom"
 
 
 const MenuDesktop = () => {
@@ -26,9 +26,9 @@ const MenuDesktop = () => {
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
-                  <a
+                  <Link
                     className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                    href="/"
+                    to={'/'}
                     >
                     <div className="mt-4 mb-2 text-lg font-medium">
                       JeanDev
@@ -36,16 +36,16 @@ const MenuDesktop = () => {
                     <p className="text-muted-foreground text-sm leading-tight">
                       Sumérgete en el apasionante mundo del café con nuestra web especializada en la venta de deliciosos postres elaborados a base de café (grano, molidos, capsula).
                     </p>
-                  </a>
+                  </Link>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/shop" title="Tienda">
+              <ListItem href="#" title="Tienda">
                 Accede a toda tu information, tus pedidos y mucho mas.
               </ListItem>
-              <ListItem href="/offers" title="Ofertas">
+              <ListItem href="#" title="Ofertas">
                 Seccion dedicada a promociones y descuentos especiales.
               </ListItem>
-              <ListItem href="/" title="Accesorios">
+              <ListItem href="#" title="Accesorios">
                 Puntos especiales de articulos para manipular tu café.
               </ListItem>
             </ul>
@@ -71,11 +71,11 @@ const MenuDesktop = () => {
         </NavigationMenuItem>
 
         {/* accesorios */}
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link to={'/accesorios'}>Accesorios</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
 
       </NavigationMenuList>
     </NavigationMenu>
@@ -114,12 +114,12 @@ function ListItem({
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
-        <Link to={href}>
+        <div className="cursor-default">
           <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
-        </Link>
+        </div>
       </NavigationMenuLink>
     </li>
   )
