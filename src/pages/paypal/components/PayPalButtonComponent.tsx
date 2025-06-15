@@ -8,12 +8,6 @@ const PayPalButtonComponent = () => {
   const { items: cartItems, removeAll } = useCart();
   const urlBaseBackend = import.meta.env.VITE_BACKEND_URL;
   const { paymentId } = useParams()
-  
-  // Total desde carrito (para crear orden)
-  // const totalAmount = cartItems.reduce((acc, item) => {
-  //   const quantity = item.quantity ?? 1;
-  //   return acc + item.price * quantity;
-  // }, 0);
 
   // ✅ Crear orden: guardamos los productos en localStorage
   const handleCreateOrder = async () => {
