@@ -69,7 +69,7 @@ const PayPalButtonComponent = () => {
     captureOrder();
   }, [paymentId, urlBaseBackend, removeAll]);
 
-  return <Button onClick={handleCreateOrder}>Pagar con Paypal</Button>;
+  return <Button className="w-full cursor-pointer" onClick={handleCreateOrder}>Pagar con Paypal</Button>;
 };
 
 export default PayPalButtonComponent

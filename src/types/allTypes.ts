@@ -59,3 +59,20 @@ export type ResultFilterTypes = {
 export type FilterOriginProps = {
   setFilterOrigin: (origin: string) => void
 }
+
+export type FinishPay = {
+  data: {
+    id: number
+    captureData: {
+      payer: {
+        email: string
+        name: {
+          firstName: string
+          lastName: string
+        }
+      }
+    }
+    items: ProductsType[]
+    total: number
+  }
+}

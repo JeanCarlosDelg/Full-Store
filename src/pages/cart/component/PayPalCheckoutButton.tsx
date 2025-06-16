@@ -1,3 +1,5 @@
+//este componenet es para tener de prueba usando solo el boton original de paypal 
+
 import { useCart } from "@/hooks/useCart";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 

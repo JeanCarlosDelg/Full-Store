@@ -21,7 +21,7 @@ const MenuDesktop = () => {
         
         {/* Sobre Nosotros */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Sobre Nosotros</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-slate-200 dark:bg-slate-800">Sobre Nosotros</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -54,7 +54,7 @@ const MenuDesktop = () => {
 
         {/* Cafés */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Cafés</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-slate-200 dark:bg-slate-800">Cafés</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {components.map((component) => (
@@ -69,13 +69,6 @@ const MenuDesktop = () => {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
-        {/* accesorios */}
-        {/* <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to={'/accesorios'}>Accesorios</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem> */}
 
       </NavigationMenuList>
     </NavigationMenu>

@@ -35,7 +35,7 @@ const InfoProduct = ({ product }: InfoProductProps) => {
 
       <div className="flex items-center gap-5">
         <Button className="w-[70%]" onClick={() => addItem(product)}>
-          Comprar
+          Añadir al carrito
         </Button>
         <Heart
           width={30}

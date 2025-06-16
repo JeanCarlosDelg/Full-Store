@@ -1,18 +1,17 @@
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./layouts/Layout.tsx";
-import NoLayout from "./layouts/NoLayout.tsx";
+import Layout from "./layouts/Layout.tsx"
 import NotFound from "./pages/NotFound.tsx";
 import Cart from "./pages/cart/Cart.tsx";
 import LoveProducts from "./pages/loveProducts/LoveProducts.tsx";
 import MyProfile from "./pages/MyProfile.tsx";
 import CategoryDetail from "./pages/categories/CategoryDetail.tsx";
 import Products from "./pages/products/Products.tsx";
-import PaypalSuccess from "./pages/paypal/components/PaypalSuccess.tsx";
-import PaypalCancel from "./pages/paypal/components/PaypalCancel.tsx";
+import PaypalSuccess from "./pages/paypal/PaypalSuccess.tsx";
+import PaypalCancel from "./pages/paypal/PaypalCancel.tsx";
 
 const router = createBrowserRouter([
   {
@@ -50,15 +49,9 @@ const router = createBrowserRouter([
       {
         path: "cancel",
         element: <PaypalCancel />
-      }
-    ]
-  },
-  {
-    path: "*",
-    element: <NoLayout />,
-    children: [
+      },
       {
-        path: "notfound",
+        path: "*",
         element: <NotFound />
       }
     ]
@@ -66,7 +59,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+  // <StrictMode>
       <RouterProvider router={router} />
-  </StrictMode>
+  // </StrictMode>
 );

@@ -1,4 +1,3 @@
-// import ModalLocedProducts from "@/components/ModalLocedProducts"
 import ModalLocedProducts from "@/components/ModalLocedProducts";
 import {
   ImagesMiniatured,
@@ -15,8 +14,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface ItemLoveProductProps {
-  product: ProductsType;
-  // setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
+  product: ProductsType
 }
 
 const ItemLoveProduct = ({ product }: ItemLoveProductProps) => {
@@ -30,8 +28,7 @@ const ItemLoveProduct = ({ product }: ItemLoveProductProps) => {
       (item) => item.idProd === product.idProd
     );
     if (existingProduct) {
-      setOpenModal(true);
-      // increaseQuantity(product.idProd)
+      setOpenModal(true)
     } else {
       addItem(product);
       removeloveItem(product.idProd);

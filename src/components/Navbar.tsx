@@ -2,36 +2,23 @@ import { BaggageClaim, Heart, ShoppingCart, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import MenuMobile from "./MenuMobile";
 import MenuDesktop from "./MenuDesktop";
-import ModeToggle from "./ModeToggle";
-import { useEffect, useState } from "react";
+import ModeToggle from "./ModeToggle"
 import { useCart } from "@/hooks/useCart";
 import { useLovedProducts } from "@/hooks/useLovedProducts";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const { items } = useCart();
-  const { lovedItems } = useLovedProducts();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { items } = useCart()
+  const { lovedItems } = useLovedProducts()
 
   return (
     <div
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-md dark:bg-gray-900" : "bg-transparent"
-      }`}
+      className="fixed top-0 w-full z-50 transition-colors duration-300 bg-slate-200 dark:bg-slate-800"
     >
-      <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
+      <div className="flex items-center justify-between p-5 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
         <Link to={"/"}>
-          <h1 className="text-3xl">
+          <h1 className="text-3xl font-semibold text-red-500">
             Jean
-            <span className="font-bold">Dev</span>
+            <span className="font-bold text-black dark:text-white">Dev</span>
           </h1>
         </Link>
         <div className="items-center justify-between hidden sm:flex">
@@ -40,7 +27,7 @@ const Navbar = () => {
         <div className="flex sm:hidden">
           <MenuMobile />
         </div>
-        <div className="flex items-center justify-between gap-2 md:gap-7">
+        <div className="flex items-center text-red-500 font-extrabold justify-between mr-2 gap-2 md:gap-7">
           {items.length === 0 ? (
             <Link to={"/cart"} className="no-underline hover:underline">
               {/* icono del carrito */}
