@@ -8,13 +8,14 @@ export function transformCategoryData(data: any[]): CategoryType[] {
       id,
       slug: slug,
       name: categoryName,
-      image: mainImage
-        ? {
-            urlImg: mainImage.url,
-          }
-        : {
-            urlImg: mainImage.url,
-          },
+      url: mainImage
+      // image: mainImage
+      //   ? {
+      //       urlImg: mainImage.url,
+      //     }
+      //   : {
+      //       urlImg: mainImage.url,
+      //     },
     };
   });
 }

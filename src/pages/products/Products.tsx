@@ -1,18 +1,19 @@
-import { useGetProductSlug } from "@/api/UseGetProductSlug";
-import type { ResponseType } from "@/types/allTypes";
-import { SkeletonProducts } from "./components/SkeletonProducts";
-import { CarouselProduct } from "./components/CarouselProduct";
-import InfoProduct from "./components/InfoProduct";
-import { Navigate } from "react-router-dom";
+import { SkeletonProducts } from "./components/SkeletonProducts"
+import { CarouselProduct } from "./components/CarouselProduct"
+import InfoProduct from "./components/InfoProduct"
+import { Navigate, useParams } from "react-router-dom"
+import { useProducts } from "@/hooks/useProducts"
 
 const Products = () => {
-  const { products, loading }: ResponseType = useGetProductSlug();
+  const { slug } = useParams()
+  const { filterBySlug, loading } = useProducts();
+  const products = filterBySlug(slug ?? "");
 
   if (loading) {
     return <SkeletonProducts />;
   }
 
-  if (!products) return <Navigate to={"*"}/>;
+  if (!products) return <Navigate to={"*"} />;
 
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-32 sm:px-24">

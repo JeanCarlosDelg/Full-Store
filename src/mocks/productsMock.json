@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "slug": "cafe-molido-citrico",
+    "productName": "Café Molido Cítrico",
+    "active": true,
+    "description": "Mezcla molida de granos arábica con notas a limón. Perfecto para espresso o cafetera italiana, aporta frescura y energía con su aroma vibrante.",
+    "price": 5.8,
+    "isFeatured": true,
+    "origin": "Africa",
+    "taste": "citric",
+    "images": [
+      {
+        "id": 101,
+        "name": "Café_Molido_Cítrico1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687127/thumbnail_f425x230_19990_33972_5050_wmjyht_bc9e0f4945.jpg"
+      },
+      {
+        "id": 102,
+        "name": "Café_Molido_Cítrico2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687127/large_K_Bibc_T_Gj_R_2000x1500_1_lt5vt2_4e30bb590d.jpg"
+      },
+      {
+        "id": 103,
+        "name": "Café_Molido_Cítrico3.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687127/small_Detox_Tea08_w2jzvl_e9c2da5fb1.jpg"
+      }
+    ],
+    "category": {
+      "id": 10001,
+      "categoryName": "molido",
+      "slug": "molido"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "capsulas-espresso-vainilla",
+    "productName": "Cápsulas Espresso Vainilla",
+    "active": true,
+    "description": "Cápsulas compatibles con máquinas tipo Nespresso. Sabor suave con notas a vainilla dulce, ideal para tardes de relax o sobremesas.",
+    "price": 7.1,
+    "isFeatured": true,
+    "origin": "America",
+    "taste": "sweet",
+    "images": [
+      {
+        "id": 201,
+        "name": "capsulas_espresso_vainilla1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687512/thumbnail_images_n0mod0_9e996227ab.jpg"
+      },
+      {
+        "id": 202,
+        "name": "capsulas_espresso_vainilla2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687512/thumbnail_images_xihgts_d3daec2817.jpg"
+      },
+      {
+        "id": 203,
+        "name": "capsulas_espresso_vainilla2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687512/thumbnail_images_f9alwm_476930726d.jpg"
+      }
+    ],
+    "category": {
+      "id": 10003,
+      "categoryName": "capsula",
+      "slug": "capsula"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "brownie-de-cafe",
+    "productName": "Brownie de Café",
+    "active": true,
+    "description": "Brownie artesanal con infusión de café intenso con textura densa y sabor profundo a cacao. Un clásico con el toque de tueste perfecto.",
+    "price": 3.5,
+    "isFeatured": false,
+    "origin": "America",
+    "taste": "sweet",
+    "images": [
+      {
+        "id": 301,
+        "name": "brownie_de_cafe1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749688252/small_Brownie_de_cafe_CC_81_Portada_n4ilro_0d0a0e8ebf.jpg"
+      },
+      {
+        "id": 302,
+        "name": "brownie_de_cafe2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749688252/small_rye_chocolate_coffeecake_fqpfhv_f8233c3034.jpg"
+      },
+      {
+        "id": 303,
+        "name": "brownie_de_cafe3.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749688252/small_chocolate_brownies_white_plate_coffee_beans_wooden_spoon_1150_20871_oryn9j_1cb0382418.jpg"
+      }
+    ],
+    "category": {
+      "id": 10001,
+      "categoryName": "molido",
+      "slug": "molido"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "cafe-en-grano-suave",
+    "productName": "Café en Grano Suave",
+    "active": true,
+    "description": "Granos de café con tueste medio y cuerpo ligero. Notas dulces con final suave y limpio, recomendado para filtrado o cold brew.",
+    "price": 6,
+    "isFeatured": false,
+    "origin": "Africa",
+    "taste": "sweet",
+    "images": [
+      {
+        "id": 401,
+        "name": "cafe_en_grano_suave1.jpeg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689683/thumbnail_cafe1_396dfdd38d.jpg"
+      },
+      {
+        "id": 402,
+        "name": "cafe_en_grano_suave2.jpeg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689683/small_depositphotos_229325712_stock_photo_cup_coffee_cake_coffee_beans_ygzvbr_38ac0b3dfc.webp"
+      },
+      {
+        "id": 403,
+        "name": "cafe_en_grano_suave3.jpeg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689683/thumbnail_prmqzhvsxqvxdr3dtirt_d8c810d062.jpg"
+      }
+    ],
+    "category": {
+      "id": 10002,
+      "categoryName": "grano",
+      "slug": "grano"
+    }
+  },
+  {
+    "id": 5,
+    "slug": "scones-glaseados-de-limon",
+    "productName": "Scones glaseados de limón",
+    "active": true,
+    "description": "Panecillos esponjosos con un toque de limón, cubiertos con glaseado cítrico y ligero. Perfectos para el desayuno o una merienda.",
+    "price": 3,
+    "isFeatured": true,
+    "origin": "Europe",
+    "taste": "citric",
+    "images": [
+      {
+        "id": 501,
+        "name": "scones_glaseados_de_limon1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687856/small_1465560506_tarta_de_lima_b99jcc_c0878f107b.jpg"
+      },
+      {
+        "id": 502,
+        "name": "scones_glaseados_de_limon2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687856/large_EUQHJK_2_MGFIBJFPYU_4_WMTQVYIE_mfkz5g_7399464b20.jpg"
+      },
+      {
+        "id": 503,
+        "name": "scones_glaseados_de_limon2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687856/large_62187fb72379c35c95252595be3490f5_fkie3e_53f0259e16.jpg"
+      }
+    ],
+    "category": {
+      "id": 10002,
+      "categoryName": "grano",
+      "slug": "grano"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "tartaleta-de-lima-y-cafe",
+    "productName": "Tartaleta de Lima y Café",
+    "active": true,
+    "description": "Tarta pequeña con base de café crujiente, relleno ácido de crema de lima fresca. Fusión perfecta de sabores cítricos y tostados.",
+    "price": 4.3,
+    "isFeatured": false,
+    "origin": "America",
+    "taste": "citric",
+    "images": [
+      {
+        "id": 601,
+        "name": "tartaleta_de_lima_y_cafe1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689577/small_scones_de_manzanas_y_arandanos_recetas_chef_oropeza_jpg_940x450_ipkx2f_ee94b0a545.jpg"
+      },
+      {
+        "id": 602,
+        "name": "tartaleta_de_lima_y_cafe2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689577/small_hq720_edqvji_0380c9ffa2.jpg"
+      },
+      {
+        "id": 603,
+        "name": "tartaleta_de_lima_y_cafe3.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689577/large_1511_La_Reposteria_De_Anna_Olson_T2_Scones_Clasicos_Limon_ungarp_ed9ce676c7.jpg"
+      }
+    ],
+    "category": {
+      "id": 10001,
+      "categoryName": "molido",
+      "slug": "molido"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "muffin-de-cafe-con-caramelo",
+    "productName": "Muffin de Café con Caramelo",
+    "active": true,
+    "description": "Bizcocho húmedo de café con centro de caramelo. Dulce, suave y perfecto con una taza caliente. Decorado con cobertura brillante de caramelo.",
+    "price": 3.9,
+    "isFeatured": false,
+    "origin": "Europe",
+    "taste": "sweet",
+    "images": [
+      {
+        "id": 701,
+        "name": "muffin_de_cafe_con_caramelo1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689467/small_Cupcake_de_Nuez_Caramelo_y_Cafe_g72awn_7677de765b.jpg"
+      },
+      {
+        "id": 702,
+        "name": "muffin_de_cafe_con_caramelo2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689467/small_cupcakes_de_vainilla_con_sirope_de_caramelo_y_buttercream_de_cafe_foto_principal_oy6svp_749145abfd.jpg"
+      },
+      {
+        "id": 703,
+        "name": "muffin_de_cafe_con_caramelo3.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749689467/large_cupcakes_de_cafe_espresso_y_nueces_pecanas_yvmysb_e2331668cb.webp"
+      }
+    ],
+    "category": {
+      "id": 10003,
+      "categoryName": "capsula",
+      "slug": "capsula"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "cafe-granulado-clasico",
+    "productName": "Café Granulado Clásico",
+    "active": true,
+    "description": "Café instantáneo elaborado con granos seleccionados. Disolución rápida y sabor equilibrado, ideal para quienes buscan rapidez sin perder calidad.",
+    "price": 4.8,
+    "isFeatured": false,
+    "origin": "Asia ",
+    "taste": "sweet",
+    "images": [
+      {
+        "id": 801,
+        "name": "cafe_granulado_clasico1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749688442/thumbnail_images_dsgoxt_5f600b3405.jpg"
+      },
+      {
+        "id": 802,
+        "name": "cafe_granulado_clasico2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749688442/thumbnail_xifvjy22n66olga3oolk_8353b81d62.jpg"
+      },
+      {
+        "id": 803,
+        "name": "cafe_granulado_clasico3.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749688442/thumbnail_images_yaxowe_cd83646884.jpg"
+      }
+    ],
+    "category": {
+      "id": 10001,
+      "categoryName": "molido",
+      "slug": "molido"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "cafe-en-grano-intenso",
+    "productName": "Café en Grano Intenso",
+    "active": true,
+    "description": "Café de tueste oscuro con notas a chocolate amargo. Cultivado en altura para una acidez equilibrada, ideal para métodos de filtrado o prensa francesa.",
+    "price": 6.5,
+    "isFeatured": true,
+    "origin": "America",
+    "taste": "sweet",
+    "images": [
+      {
+        "id": 901,
+        "name": "cafe_en_grano_intenso1.png",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749686893/large_1140_roasted_coffee_grinder_esp_tlczyn_f330a849a2.png"
+      },
+      {
+        "id": 902,
+        "name": "cafe_en_grano_intenso2.png",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749686892/large_20230202120418_dibek_coffee_recipe_blog_1920x1080_p6amit_28e0a74a67.jpg"
+      },
+      {
+        "id": 903,
+        "name": "cafe_en_grano_intenso3.png",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749686892/thumbnail_What_is_Turkish_Coffee_Thumbnail_640x640_rcb2aj_8ba37a7e96.jpg"
+      }
+    ],
+    "category": {
+      "id": 10002,
+      "categoryName": "grano",
+      "slug": "grano"
+    }
+  },
+  {
+    "id": 10,
+    "slug": "tarta-de-cafe-y-naranja",
+    "productName": "Tarta de Café y Naranja",
+    "active": true,
+    "description": "Postre artesanal con base de bizcocho de café, relleno con crema de naranja natural. Perfecto para acompañar con café caliente.",
+    "price": 4.2,
+    "isFeatured": false,
+    "origin": "Europe",
+    "taste": "citric",
+    "images": [
+      {
+        "id": 1001,
+        "name": "tarta_de_cafe_y_naranja1.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687372/small_617e_e_Vgza_L_AC_UF_894_1000_QL_80_yqaqb3_9d7c01d309.jpg"
+      },
+      {
+        "id": 1002,
+        "name": "tarta_de_cafe_y_naranja2.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687372/large_721f4c270d1d7ad9a7595bb25065a356_tarta_1200_628_unpbwc_78280f59d3.jpg"
+      },
+      {
+        "id": 1003,
+        "name": "tarta_de_cafe_y_naranja3.jpg",
+        "url": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687372/large_coffee_and_orange_served_with_cake_and_coffee_beans_on_a_wooden_table_free_photo_apfaeo_0aa319cdab.jpg"
+      }
+    ],
+    "category": {
+      "id": 10001,
+      "categoryName": "molido",
+      "slug": "molido"
+    }
+  }
+]

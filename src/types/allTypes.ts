@@ -35,16 +35,16 @@ export type CategoryType = {
   id: number,
   name: string,
   slug: string,
-  image: {
-    urlImg: string
-  }
+  url: string
 }
-
-export type FilterTypes = {
-  products: ResultFilterTypes | null,
-  loading: boolean,
-  error: string
-}
+// export type CategoryType = {
+//   id: number,
+//   name: string,
+//   slug: string,
+//   image: {
+//     urlImg: string
+//   }
+// }
 
 export type ResultFilterTypes = {
   schema: {
@@ -56,8 +56,10 @@ export type ResultFilterTypes = {
   }
 }
 
-export type FilterOriginProps = {
-  setFilterOrigin: (origin: string) => void
+export type FilterTypes = {
+  products: ResultFilterTypes | null,
+  loading: boolean,
+  error: string
 }
 
 export type FinishPay = {

@@ -1,8 +1,9 @@
 import { Separator } from "@/components/ui/separator";
 import { useCart } from "@/hooks/useCart";
 import { transformPriceData } from "@/utils/transformPriceData";
-import CartItem from "./component/CartItem";
-import PayPalButtonComponent from "../paypal/components/PayPalButtonComponent";
+import CartItem from "./component/CartItem"
+// import PayPalButtonComponent from "../paypal/components/PayPalButtonComponent";
+import RealPaypalButton from "../paypal/components/RealPaypalButton";
 
 const Cart = () => {
   
@@ -29,7 +30,7 @@ const Cart = () => {
               <p>{transformPriceData(totalPrice)}</p>
             </div>
             <div className="flex items-center justify-center w-full mt-3">
-              <PayPalButtonComponent />
+              <RealPaypalButton />
             </div>
           </div>
         </div>

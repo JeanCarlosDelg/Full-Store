@@ -1,4 +1,4 @@
-import { useGetFeatureProducts } from "@/api/UseGetFeatureProducts";
+// import { useGetFeatureProducts } from "@/api/UseGetFeatureProducts";
 import {
   BottonsMiniatured,
   ImagesMiniatured,
@@ -13,11 +13,19 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import type { ProductsType, ResponseType } from "@/types/allTypes";
+import { useProducts } from "@/hooks/useProducts";
+import type { ProductsType } from "@/types/allTypes";
+import { useEffect } from "react";
 
 const FeaturedProducts = () => {
 
-  const { products, loading }: ResponseType = useGetFeatureProducts();
+  const { isFeatured, loadProduct, loading } = useProducts()
+
+  useEffect(() => {
+    loadProduct()
+  }, [])
+  
+  // const { products, loading }: ResponseType = useGetFeatureProducts();
 
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
@@ -28,8 +36,8 @@ const FeaturedProducts = () => {
         <CarouselContent className="-ml-2 md:-ml-4">
           {loading && <SkeletonSchema grid={3} />}
 
-          {products !== null &&
-            products.map((product: ProductsType) => (
+          {isFeatured !== null &&
+            isFeatured.map((product: ProductsType) => (
               <CarouselItem
                 key={product.idProd}
                 className="md:basis-1/2 lg:basis-1/3 group"

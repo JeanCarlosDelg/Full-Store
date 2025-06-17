@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "categoryName": "molido",
+    "slug": "molido",
+    "mainImage": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749686321/thumbnail_ej8c7ng2s9ytislzcrnn_19799fff0d.jpg"
+  },
+  {
+    "id": 2,
+    "categoryName": "grano",
+    "slug": "grano",
+    "mainImage": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749686253/thumbnail_images_dwgmgv_dba57d4fc1.jpg"
+  },
+  {
+    "id": 3,
+    "categoryName": "capsula",
+    "slug": "capsula",
+    "mainImage": "https://res.cloudinary.com/djz0iogr2/image/upload/v1749687213/thumbnail_images_a96yum_94ee1b6e99.jpg"
+  }
+]
