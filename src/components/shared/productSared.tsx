@@ -34,7 +34,8 @@ export const BottonsMiniatured = ({
   const { addItem } = useCart();
 
   return (
-    <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
+    <div className="absolute w-full px-6 transition duration-200 
+opacity-100 md:opacity-0 md:group-hover:opacity-100 bottom-5">
       <div className="flex justify-center gap-x-6">
         <LinkButton to={`/product/${slugProd}`}>
           <Expand size={20} />
@@ -59,7 +60,7 @@ export const ImagesMiniatured = ({ url, name }:ImagesMiniaturedProps) => {
     <img
       src={url}
       alt={name}
-      className="w-24 h-24 overflow-hidden rounded-md sm:w-50 sm:h-32 object-cover"
+      className="w-[175px] h-[175px] overflow-hidden rounded-md sm:w-50 sm:h-32 object-cover"
     />
   );
 };

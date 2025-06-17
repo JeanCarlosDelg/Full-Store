@@ -7,7 +7,7 @@ export type FilterOriginProps = {
 const FiltersCategories = ({ setFilterOrigin }: FilterOriginProps) => {
   
   return (
-    <div className="sm:w-[350px] sm:mt-5 p-6">
+    <div className="flex justify-center sm:w-[350px] sm:mt-5 p-6">
       <FilterOrigin setFilterOrigin={setFilterOrigin} />
     </div>
   )

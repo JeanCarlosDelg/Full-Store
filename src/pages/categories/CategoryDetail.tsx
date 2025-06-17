@@ -32,12 +32,12 @@ const CategoryDetail = () => {
           Café {slug === "molido" ? slug : `en ${slug}`} y Postres
         </h1>
       )}
-      <Separator />
+      <Separator className="py-[1px] bg-red-500 mt-2"/>
 
       <div className="sm:flex sm:justify-between">
         <FiltersCategories setFilterOrigin={setFilterOrigin} />
 
-        <div className="grid gap-5 mt-8 md:grid-cols-2 md:gap-10">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 mt-8 md:grid-cols-2 md:gap-10">
           {loading && <SkeletonSchema grid={3} />}
           {!loading &&
             originProduct !== null &&
