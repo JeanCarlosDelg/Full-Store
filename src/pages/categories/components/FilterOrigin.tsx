@@ -1,14 +1,10 @@
-import { useGetOriginProducts } from "@/api/useGetOriginProducts";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import type { FilterOriginProps } from "./FiltersCategories";
-import type { FilterTypes } from "@/types/allTypes";
+import type { FilterOriginProps } from "./FiltersCategories"
 import { useProducts } from "@/hooks/useProducts";
 
 const FilterOrigin = ({ setFilterOrigin }: FilterOriginProps) => {
-  const { products, loading }: FilterTypes = useGetOriginProducts();
-
-  const { getOrigin } = useProducts();
+  const { loading, products, getOrigin,  } = useProducts();
   const origin = getOrigin();
 
   return (
