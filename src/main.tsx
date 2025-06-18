@@ -2,7 +2,7 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import Layout from "./layouts/Layout.tsx"
 import NotFound from "./pages/NotFound.tsx";
 import Cart from "./pages/cart/Cart.tsx";
@@ -51,8 +51,12 @@ const router = createBrowserRouter([
         element: <PaypalCancel />
       },
       {
-        path: "*",
+        path: "404",
         element: <NotFound />
+      },
+      {
+        path: "*",
+        element: <Navigate to={"/404"} replace />
       }
     ]
   },

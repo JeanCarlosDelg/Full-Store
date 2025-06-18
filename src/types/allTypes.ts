@@ -24,11 +24,12 @@ export type ProductsType = {
     idImg: number,
     url: string,
   }[],
-  category: {
-    idCate: number,
-    slugCate: string,
-    nameCate: string  
-  }
+  category: CategoryType
+  // {
+  //   idCate: number,
+  //   slugCate: string,
+  //   nameCate: string  
+  // }
 }
 
 export type CategoryType = {

@@ -1,19 +1,18 @@
-import { SkeletonProducts } from "./components/SkeletonProducts"
-import { CarouselProduct } from "./components/CarouselProduct"
-import InfoProduct from "./components/InfoProduct"
-import { Navigate, useParams } from "react-router-dom"
-import { useProducts } from "@/hooks/useProducts"
+import { SkeletonProducts } from "./components/SkeletonProducts";
+import { CarouselProduct } from "./components/CarouselProduct";
+import InfoProduct from "./components/InfoProduct";
+import { Navigate, useParams } from "react-router-dom";
+import { useProducts } from "@/hooks/useProducts";
 
 const Products = () => {
-  const { slug } = useParams()
+  const { slug } = useParams();
   const { filterBySlug, loading } = useProducts();
+
   const products = filterBySlug(slug ?? "");
 
-  if (loading) {
-    return <SkeletonProducts />;
-  }
+  if (loading) return <SkeletonProducts />;
 
-  if (!products) return <Navigate to={"*"} />;
+  if (!products) return <Navigate to="/404" replace />;
 
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-32 sm:px-24">

@@ -1,11 +1,9 @@
-// import { useGetCategories } from "@/api/UseGetCategories";
-import { useProducts } from "@/hooks/useProducts";
-import type { CategoryType } from "@/types/allTypes";
+import { useProducts } from "@/hooks/useProducts"
+import type { CategoryType } from "@/types/allTypes"
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ChooseCategory = () => {
-  // const { products, loading}: ResponseType = useGetCategories();
   const { loading, loadProduct, categories} = useProducts()
 
   useEffect(() => {

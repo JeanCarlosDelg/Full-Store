@@ -2,6 +2,7 @@ import { PayPalButtons } from "@paypal/react-paypal-js";
 import { useCart } from "@/hooks/useCart";
 import { useNavigate } from "react-router-dom";
 import { transformOrderData } from "@/utils/transformOrderData";
+import type { CreateOrderActions, CreateOrderData, OnApproveActions, OnApproveData } from "@paypal/paypal-js";
 
 const RealPaypalButton = () => {
   const navigate = useNavigate();
@@ -12,9 +13,7 @@ const RealPaypalButton = () => {
     0
   );
 
-  return (
-    <PayPalButtons
-      createOrder={(_, actions) => {
+  const createOrder = (_: CreateOrderData, actions:CreateOrderActions ) => {
         return actions.order.create({
           intent: "CAPTURE",
           purchase_units: [
@@ -40,8 +39,9 @@ const RealPaypalButton = () => {
             },
           ],
         });
-      }}
-      onApprove={async (_, actions) => {
+      }
+
+      const onApprove = async (_: OnApproveData, actions: OnApproveActions) => {
         const details = await actions.order?.capture();
 
         if (!details) return;
@@ -74,12 +74,28 @@ const RealPaypalButton = () => {
         navigate("/success");
 
         removeAll();
-      }}
-      onError={(err) => {
+      }
+
+      const onCancel = () => {
+        console.log("🚫 Pago cancelado, redirigiendo a /cancel");
+        navigate("/cancel"); // ✅ redirección si cancelan el pago
+      }
+
+      const onError = (err: any) => {
         console.error("❌ Error con PayPal:", err);
         alert("Error con el pago");
-      }}
+      }
+
+  return (
+    <>
+    <button onClick={() => navigate("/cancel")}>Test Cancel</button>
+    <PayPalButtons className="w-full"
+      createOrder={createOrder}
+      onApprove={onApprove}
+      onCancel={onCancel}
+      onError={onError}
     />
+    </>
   );
 };
 

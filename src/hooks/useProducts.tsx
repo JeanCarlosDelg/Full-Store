@@ -22,7 +22,7 @@ const newProducts: ProductsType[] = transformProductData(productsMock);
 const newCategories: CategoryType[] = transformCategoryData(categoriesMock);
 
 export const useProducts = create<ProductsStore>((set, get) => ({
-  products: [],
+  products: newProducts,
 
   filtered: [],
 
@@ -42,7 +42,6 @@ export const useProducts = create<ProductsStore>((set, get) => ({
 
       setTimeout(() => {
         set({
-          products: newProducts,
           filtered: newProducts,
           categories: newCategories,
           isFeatured: featured,
@@ -67,7 +66,7 @@ export const useProducts = create<ProductsStore>((set, get) => ({
     return products.filter((item) => {
       const matchOrigin =
         origin === "Todos" || origin === "" || item.origin === origin;
-      const matchCategory = item.category.slugCate === slugCate;
+      const matchCategory = item.category.slug === slugCate;
       return matchOrigin && matchCategory;
     });
   },
@@ -80,7 +79,7 @@ export const useProducts = create<ProductsStore>((set, get) => ({
   filterByCategory: (categoria) =>
     set((state) => ({
       filtered: state.products.filter(
-        (item) => item.category.nameCate === categoria
+        (item) => item.category.name === categoria
       ),
     })),
 }));
