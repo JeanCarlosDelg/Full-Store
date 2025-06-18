@@ -6,7 +6,8 @@ import { Outlet } from "react-router-dom";
 import { Toaster } from "sonner";
 
 const initialOptions = {
-    clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID,
+    // clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || 'AaQ2ekLpMNJ_cEWYO0nTOuovEH_bRESIAUzfIC3bC0ysHkOpDIbnjV-eXjICh22qIeSCzZnlS7QyiVL-',
+    clientId: 'AaQ2ekLpMNJ_cEWYO0nTOuovEH_bRESIAUzfIC3bC0ysHkOpDIbnjV-eXjICh22qIeSCzZnlS7QyiVL-',
     currency: "USD",
     intent: "capture"
   };
