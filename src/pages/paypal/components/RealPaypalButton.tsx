@@ -87,15 +87,12 @@ const RealPaypalButton = () => {
       }
 
   return (
-    <>
-    <button onClick={() => navigate("/cancel")}>Test Cancel</button>
     <PayPalButtons className="w-full"
       createOrder={createOrder}
       onApprove={onApprove}
       onCancel={onCancel}
       onError={onError}
     />
-    </>
   );
 };
 
