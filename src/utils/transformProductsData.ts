@@ -32,15 +32,17 @@ export function transformProductData(data: any[]): ProductsType[] {
           })) || [],
       category: category
         ? {
-            idCate: category.id,
-            slugCate: category.slug,
-            nameCate: category.categoryName,
+            id: category.id,
+            slug: category.slug,
+            name: category.categoryName,
+            url: category.url
           }
         : {
-            idCate: 0,
-            slugCate: "",
-            nameCate: "",
-          },
+            id: 0,
+            slug: "",
+            name: "",
+            url: ""
+          }
     };
   });
 }
